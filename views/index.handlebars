@@ -1,7 +1,7 @@
 <div class='container'>
-  <div class='row'>
+  <div class='row' >
     <div class='col-xs-12 text-center' id='top-bar'>
-      <h1>EAT DA BURGER!!!</h1>
+      <h1 style='color: rgba(214, 34, 70, 1)'>EAT DA BURGER!!!</h1>
     </div>
     <div class='col-xs-6 text-center' class='task'>
       <div class='row'>
@@ -11,7 +11,7 @@
           <pre>{{this.id}}. {{this.burger_name}}</pre>
         </div>
       <div class='col-xs-3 text-center'>
-        <form method='PUT' action='/burgers/update/'
+        <form method='PUT' action='/burgers/update/{{this.id}}'
         class='button-size'>
           <input type='hidden' name='burger_id' type='text' value='{{this.id}}'>
           <br>

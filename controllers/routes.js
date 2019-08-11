@@ -9,11 +9,11 @@ router.get('/', function(req, res) {
 	});
 });
 
-router.put('/burgers/update/:id', function(req, res) {
-	var condition = 'id = ' + req.params.id;
-	console.log(condition);
+router.get('/burgers/update/:id', function(req, res) {
+	// var condition = 'id = ' + req.params.id;
+	// console.log('worked');
 
-	burger.update(req.body.burger_id, function(result) {
+	burger.update(req.params.id, function(result) {
 		console.log(result);
 		res.redirect('/');
 	});
